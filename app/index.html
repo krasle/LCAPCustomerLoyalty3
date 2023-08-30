@@ -28,7 +28,7 @@
                     return Controller.extend("PreviewController", {
                         onInit: function () {
 
-                            const data = {"Services":[{"ServiceName":"loyaltySrv","DetailsURL":"./loyalty-srv/","Metadata":"./loyalty-srv/$metadata","Entities":[{"Name":"Customer","URL":"./loyalty-srv/Customer","FioriURL":"$fiori-preview/loyaltySrv/Customer#preview-app"},{"Name":"Purchase","URL":"./loyalty-srv/Purchase","FioriURL":"$fiori-preview/loyaltySrv/Purchase#preview-app"}],"EntitiesCount":2}]}
+                            const data = {"Services":[{"ServiceName":"loyaltySrv","DetailsURL":"./service/loyalty/","Metadata":"./service/loyalty/$metadata","Entities":[{"Name":"Customer","URL":"./service/loyalty/Customer","FioriURL":"$fiori-preview/loyaltySrv/Customer#preview-app"},{"Name":"Purchase","URL":"./service/loyalty/Purchase","FioriURL":"$fiori-preview/loyaltySrv/Purchase#preview-app"}],"EntitiesCount":2}]}
                             this.getView().setModel(new JSONModel(data));
                         }
                     });
