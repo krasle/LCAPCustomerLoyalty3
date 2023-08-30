@@ -7,8 +7,8 @@
   },
   "routes": [
     {
-      "source": "^/loyalty-srv/(.*)$",
-      "target": "/loyalty-srv/$1",
+      "source": "^/service/loyalty/(.*)$",
+      "target": "/service/loyalty/$1",
       "destination": "CustomerLoyalty-app-srv",
       "authenticationType": "xsuaa"
     },

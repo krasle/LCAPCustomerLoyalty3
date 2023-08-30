@@ -82,12 +82,13 @@ modules:
               Name: CustomerLoyalty-loyaltySrv
               TokenServiceInstanceName: CustomerLoyalty-uaa
               TokenServiceKeyName: CustomerLoyalty-uaa-key
-              URL: ~{srv-api/srv-url}/loyalty-srv
+              URL: ~{srv-api/srv-url}/service/loyalty
               sap.cloud.service: lcap.CustomerLoyalty
               sap.applicationdevelopment.actions.enabled: false
               sap.build.usage: CAP
               HTML5.DynamicDestination: false
               WebIDEEnabled: false
+              MobileEnabled: false
               AppgyverEnabled: false
     build-parameters:
       no-source: true

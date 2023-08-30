@@ -28,7 +28,7 @@
                     return Controller.extend("PreviewController", {
                         onInit: function () {
 
-                            const data = {"Services":[{"ServiceName":"loyaltySrv","DetailsURL":"./loyalty-srv/","Metadata":"./loyalty-srv/$metadata","Entities":[{"Name":"Customer","URL":"./loyalty-srv/Customer","FioriURL":""},{"Name":"Purchase","URL":"./loyalty-srv/Purchase","FioriURL":""}],"EntitiesCount":2}]}
+                            const data = {"Services":[{"ServiceName":"loyaltySrv","DetailsURL":"./service/loyalty/","Metadata":"./service/loyalty/$metadata","Entities":[{"Name":"Customer","URL":"./service/loyalty/Customer","FioriURL":""},{"Name":"Purchase","URL":"./service/loyalty/Purchase","FioriURL":""}],"EntitiesCount":2}]}
                             this.getView().setModel(new JSONModel(data));
                         }
                     });
