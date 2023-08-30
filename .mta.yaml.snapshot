@@ -22,6 +22,42 @@ build-parameters:
         - bash -c "export PATH=$PATH:$(pwd)/node_modules/.bin"
         - cds build --production
 modules:
+  - name: CustomerLoyalty-CustomerLoyalty.Customers
+    type: html5
+    path: app/CustomerLoyalty.Customers
+    build-parameters:
+      builder: custom
+      commands:
+        - rm -rf dist-zip dist
+        - >-
+          npx -p @ui5/cli@^3.0.0 ui5 build --dest dist
+          --include-task=generateManifestBundle
+          --include-task=generateCachebusterInfo
+        - mkdir dist-zip
+        - >-
+          bash -c "cd dist && npx bestzip
+          ../dist-zip/CustomerLoyaltyCustomers.zip *"
+      _artifactName: CustomerLoyaltyCustomers.zip
+      supported-platforms: []
+      build-result: dist-zip
+  - name: CustomerLoyalty-CustomerLoyalty.Purchases
+    type: html5
+    path: app/CustomerLoyalty.Purchases
+    build-parameters:
+      builder: custom
+      commands:
+        - rm -rf dist-zip dist
+        - >-
+          npx -p @ui5/cli@^3.0.0 ui5 build --dest dist
+          --include-task=generateManifestBundle
+          --include-task=generateCachebusterInfo
+        - mkdir dist-zip
+        - >-
+          bash -c "cd dist && npx bestzip
+          ../dist-zip/CustomerLoyaltyPurchases.zip *"
+      _artifactName: CustomerLoyaltyPurchases.zip
+      supported-platforms: []
+      build-result: dist-zip
   - name: CustomerLoyalty-db-deployer
     type: hdb
     path: gen/db
@@ -127,6 +163,14 @@ modules:
     build-parameters:
       build-result: resources
       requires:
+        - name: CustomerLoyalty-CustomerLoyalty.Customers
+          artifacts:
+            - CustomerLoyaltyCustomers.zip
+          target-path: resources
+        - name: CustomerLoyalty-CustomerLoyalty.Purchases
+          artifacts:
+            - CustomerLoyaltyPurchases.zip
+          target-path: resources
         - name: CustomerLoyalty-launchpad
           artifacts:
             - launchpad.zip

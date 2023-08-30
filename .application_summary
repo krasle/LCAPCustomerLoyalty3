@@ -1,5 +1,5 @@
 {
   "ProjectOverviewURL": "https://lcap-int.launchpad.cfapps.sap.hana.ondemand.com/lcapCustomerLoyalty.CustomerLoyaltyLaunchpad-1.0.0",
-  "DeployedUTCTime": "2023-08-24T20:15:42.692Z",
+  "DeployedUTCTime": "2023-08-30T10:56:23.577Z",
   "ApplicationLogURL": "https://logs.cf.sap.hana.ondemand.com/app/dashboards#/view/Overview?_g=(filters:!((query:(match_phrase:(component_name:CustomerLoyalty-srv)))))"
 }
