@@ -1,0 +1,2 @@
+sap.ui.require(["sap/fe/test/JourneyRunner","CustomersLoyalty/MaintainPurchases/test/integration/FirstJourney","CustomersLoyalty/MaintainPurchases/test/integration/pages/PurchaseList","CustomersLoyalty/MaintainPurchases/test/integration/pages/PurchaseObjectPage"],function(e,t,s,a){"use strict";var e=new e({launchUrl:sap.ui.require.toUrl("CustomersLoyalty/MaintainPurchases")+"/index.html"});e.run({pages:{onThePurchaseList:s,onThePurchaseObjectPage:a}},t.run)});
+//# sourceMappingURL=opaTests.qunit.js.map

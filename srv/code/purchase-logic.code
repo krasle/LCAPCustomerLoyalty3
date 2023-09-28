@@ -1,0 +1,12 @@
+{
+    "version": "2.0",
+    "codes": [],
+    "configuration": {
+        "phase": "on",
+        "events": [
+            "CREATE"
+        ],
+        "entity": "CustomersLoyaltyService.Purchase"
+    },
+    "hash": "4d2963ecabc780f0cb322eff046a86eb18a440781d7b6bb55d698dc2fb134f305e58229a3aab00e5615a69266ec29f42e678c7840eb861efe222b73999951179"
+}

@@ -1,0 +1,6 @@
+ID,customerId,firstName,lastName,email,totalPoints,totalPurchaseValue,numberOfPurchases,redeemedPoints
+1e7b31d3-2a66-4a65-bb57-27916f129619,CUST001,John,Doe,johndoe@example.com,500,5000,5,500
+2e7b31d3-2a66-4a65-bb57-27916f129619,CUST002,Jane,Doe,janedoe@example.com,600,1200,6,120
+3e7b31d3-2a66-4a65-bb57-27916f129619,CUST003,Jim,Smith,jimsmith@example.com,700,1400,7,140
+4e7b31d3-2a66-4a65-bb57-27916f129619,CUST004,Jill,Smith,jillsmith@example.com,800,1600,8,160
+5e7b31d3-2a66-4a65-bb57-27916f129619,CUST005,Joe,Johnson,joejohnson@example.com,900,1800,8,180

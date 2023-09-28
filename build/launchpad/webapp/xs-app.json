@@ -1,0 +1,43 @@
+{
+  "welcomeFile": "/index.html",
+  "authenticationMethod": "route",
+  "logout": {
+    "logoutEndpoint": "/do/logout",
+    "logoutPage": "/logout.html"
+  },
+  "routes": [
+    {
+      "source": "^/service/CustomersLoyalty/(.*)$",
+      "target": "/service/CustomersLoyalty/$1",
+      "destination": "CustomerLoyalty-app-srv",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "^/service/loyalty/(.*)$",
+      "target": "/service/loyalty/$1",
+      "destination": "CustomerLoyalty-app-srv",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "^/index.html$",
+      "target": "/index.html",
+      "service": "html5-apps-repo-rt",
+      "cacheControl": "no-cache, no-store, must-revalidate",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "^/logout.html$",
+      "target": "/logout.html",
+      "service": "html5-apps-repo-rt",
+      "cacheControl": "no-cache, must-revalidate",
+      "authenticationType": "none"
+    },
+    {
+      "source": "^(.*)$",
+      "target": "$1",
+      "service": "html5-apps-repo-rt",
+      "cacheControl": "no-cache, must-revalidate",
+      "authenticationType": "xsuaa"
+    }
+  ]
+}
